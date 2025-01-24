@@ -2,6 +2,11 @@
     <app-learning-resources />
   
     <hr />
-  
+        
+    @if(isAdmin){
+            <p>Only admins allowed/p>
+        }
+    <!-- <p *ngIf ="isAd">welcome Admin</p>
+    <app-auth /> -->
     <app-auth />
 </main>
