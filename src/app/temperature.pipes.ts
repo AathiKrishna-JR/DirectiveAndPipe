@@ -4,7 +4,7 @@ import { Pipe, PipeTransform } from "@angular/core";
     standalone:true,
    
 })
-export class DisplayFont implements PipeTransform{
+export class temperature implements PipeTransform{
    transform(value : string | number, inputType : 'cel'|'fah', outputType ?: 'cel'|'fah' ){
         let val : number;
         if(typeof value === 'string'){
