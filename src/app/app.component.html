@@ -12,7 +12,7 @@
 <!-- <ng-template appAuth = "admin">   
 <p >Only admins should see this</p>
 </ng-template> -->
-<p *appAuth="'admin'" class="protected-content admin">Only  {{ {n=displayName;d=displayDate} |display}} should see this</p>
+<p *appAuth="'admin'" class="protected-content admin">Only  {{ {n:displayName,d:displayDate} |display}} should see this</p>
 <form *appAuth="'admin'" class = "protected-content admin">
     <label class = "protected-content admin"> Temp</label>
 </form>
