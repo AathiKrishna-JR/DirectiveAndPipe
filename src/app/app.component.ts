@@ -1,5 +1,4 @@
 import { Component, computed, inject } from '@angular/core';
-
 import { AuthComponent } from './auth/auth.component';
 import { LearningResourcesComponent } from './learning-resources/learning-resources.component';
 import { AuthService } from './auth/auth.service';
@@ -23,7 +22,7 @@ export class AppComponent {
   isAdmin = computed(() => this.authService.activePermission() === 'admin')
   displayName = "aaa";
   displayDate: Date = new Date(); 
-  temp ?: number | string | undefined ;
+  temp? : number | string;
   setDetails(det :{name :string,date :Date}){
     this.displayName = det.name.split('@')[0];
     this.displayDate = det.date
