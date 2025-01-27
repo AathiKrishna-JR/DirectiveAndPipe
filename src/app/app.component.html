@@ -9,7 +9,11 @@
     <!-- <p *ngIf ="isAd">welcome Admin</p>
     <app-auth /> -->
 <app-auth />
-<ng-template appAuth = "admin">   
+<!-- <ng-template appAuth = "admin">   
 <p >Only admins should see this</p>
-</ng-template>
+</ng-template> -->
+<p *appAuth="'admin'" class="protected-content admin">Only admins should see this</p>
+<p *appAuth="'user'" class="protected-content unauthenticated" >Regular usersee this</p>
+<p *appAuth="'unknown'" class="protected-content authenticated" >Only admins should see this</p>
+
 </main>
