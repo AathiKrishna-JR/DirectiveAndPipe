@@ -13,6 +13,10 @@
 <p >Only admins should see this</p>
 </ng-template> -->
 <p *appAuth="'admin'" class="protected-content admin">Only  {{ {n=displayName;d=displayDate} |display}} should see this</p>
+<form *appAuth="'admin'" class = "protected-content admin">
+    <label class = "protected-content admin"> Temp</label>
+</form>
+
 <p *appAuth="'guest'" class="protected-content unauthenticated" >Guest should see this {{displayName|display}}</p>
 <p *appAuth="'user'" class="protected-content authenticated" >{{displayName|display}}should see this</p>
 
