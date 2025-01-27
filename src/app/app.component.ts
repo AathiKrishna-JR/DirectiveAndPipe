@@ -3,7 +3,6 @@ import { Component, computed, inject } from '@angular/core';
 import { AuthComponent } from './auth/auth.component';
 import { LearningResourcesComponent } from './learning-resources/learning-resources.component';
 import { AuthService } from './auth/auth.service';
-import { NgIf } from '@angular/common';
 import { AuthDirective } from './auth/auth.directive';
 import { DisplayFont } from './display.pipe';
 
@@ -12,7 +11,7 @@ import { DisplayFont } from './display.pipe';
   standalone: true,
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  imports: [AuthComponent,AuthDirective , LearningResourcesComponent,NgIf,DisplayFont],
+  imports: [AuthComponent,AuthDirective , LearningResourcesComponent,DisplayFont],
 })
 export class AppComponent {
   private authService = inject(AuthService);
