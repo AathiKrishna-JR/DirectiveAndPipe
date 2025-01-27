@@ -4,7 +4,7 @@ import { Pipe, PipeTransform } from "@angular/core";
     standalone:true
 })
 export class DisplayFont implements PipeTransform{
-    transform(value : string){
-        return value + ' transformed'
+    transform(dis:{ value : string, date : Date}){
+        return dis.value + "logged In at" + dis.date;
     }
 }
