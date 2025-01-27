@@ -12,11 +12,13 @@
 <!-- <ng-template appAuth = "admin">   
 <p >Only admins should see this</p>
 </ng-template> -->
-<p *appAuth="'admin'" class="protected-content admin">Only  {{ { name: displayName, date: displayDate } |display}} should see this</p>
-<!-- <form *appAuth="'admin'" class = "protected-content admin">
-    <label class = "protected-content admin"> Temp</label>
-    <input type="text" name = "temp" >
-</form> -->
+<p *appAuth="'admin'" class="protected-content admin">Only  {{ { name: displayName, date: displayDate } | display}} should see this</p>
+<form *appAuth="'admin'" class = "protected-content admin">
+    <label class = "protected-content admin"> Temp in C</label>
+    <input type="text" name = "temp" [(ngModel)] = 'temp'  (ngModelChange)="onModelChange($event)"> 
+    <label class = "protected-content admin">{{ temp | temp}} </label>
+
+</form> 
 
 <p *appAuth="'guest'" class="protected-content unauthenticated" >Guest should see this </p>
 <p *appAuth="'user'" class="protected-content authenticated" >should see this</p>
