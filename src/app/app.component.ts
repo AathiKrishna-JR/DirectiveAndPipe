@@ -23,7 +23,7 @@ export class AppComponent {
   isAdmin = computed(() => this.authService.activePermission() === 'admin')
   displayName = "aaa";
   displayDate: Date = new Date(); 
-  temp ?: number | string ;
+  temp ?: number | string | undefined ;
   setDetails(det :{name :string,date :Date}){
     this.displayName = det.name.split('@')[0];
     this.displayDate = det.date
