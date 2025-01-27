@@ -16,6 +16,8 @@ import { DisplayFont } from './display.pipe';
 export class AppComponent {
   private authService = inject(AuthService);
   isAdmin = computed(() => this.authService.activePermission() === 'admin')
-  check = "aaa";
-
+  displayName = "aaa";
+  setName(name :string){
+    this.displayName = name;
+  }
 }

@@ -1,8 +1,9 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, Output, inject, signal, EventEmitter } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AuthService } from './auth.service';
 import { LogDirective } from '../log.directive';
+
 
 @Component({
   selector: 'app-auth',
@@ -13,11 +14,15 @@ import { LogDirective } from '../log.directive';
   hostDirectives: [LogDirective]
 })
 export class AuthComponent {
+  @Output() name = new EventEmitter<string>();
   email = signal('');
   password = signal('');
   private authService = inject(AuthService);
 
   onSubmit() {
-    this.authService.authenticate(this.email(), this.password());
+    if(this.authService.authenticate(this.email(), this.password())){
+      this.name.emit(this.email());
+    }
+
   }
 }
