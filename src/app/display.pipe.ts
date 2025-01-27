@@ -5,6 +5,6 @@ import { Pipe, PipeTransform } from "@angular/core";
 })
 export class DisplayFont implements PipeTransform{
     transform(dis:{ value : string, date : Date}){
-        return dis.value + "logged In at" + dis.date;
+        return `${dis.value} (${dis.date.toDateString()})`;
     }
 }
