@@ -14,14 +14,14 @@ import { LogDirective } from '../log.directive';
   hostDirectives: [LogDirective]
 })
 export class AuthComponent {
-  @Output() name = new EventEmitter<{n:string,d:Date}>();
+  @Output() detail = new EventEmitter<{name:string,date:Date}>();
   email = signal('');
   password = signal('');
   private authService = inject(AuthService);
 
   onSubmit() {
     if(this.authService.authenticate(this.email(), this.password())){
-      this.name.emit({n:this.email(),d:new Date});
+      this.detail.emit({name:this.email(),date:new Date});
     }
 
   }
