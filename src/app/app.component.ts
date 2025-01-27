@@ -18,6 +18,6 @@ export class AppComponent {
   isAdmin = computed(() => this.authService.activePermission() === 'admin')
   displayName = "aaa";
   setName(name :string){
-    this.displayName = name;
+    this.displayName = name.split('@')[0];
   }
 }
