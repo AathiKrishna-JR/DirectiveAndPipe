@@ -17,7 +17,7 @@ export class AppComponent {
   private authService = inject(AuthService);
   isAdmin = computed(() => this.authService.activePermission() === 'admin')
   displayName = "aaa";
-  displayDate ?: Date;
+  displayDate: Date = new Date(); 
   setDetails(det :{name :string,date :Date}){
     this.displayName = det.name.split('@')[0];
     this.displayDate = det.date
