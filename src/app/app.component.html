@@ -16,7 +16,7 @@
 <form *appAuth="'admin'" class = "protected-content admin">
     <label class = "protected-content admin"> Temp in C</label>
     <input type="text" name = "temp" [(ngModel)] = 'temp'  (ngModelChange)="onModelChange($event)"> 
-    <label class = "protected-content admin">{{ temp | temperature }} </label>
+    <label class="protected-content admin">{{ temp | temperature: "cel" }}</label>
 
 </form> 
 

@@ -7,6 +7,7 @@ import { AuthDirective } from './auth/auth.directive';
 import { DisplayFont } from './display.pipe';
 import { FormsModule } from '@angular/forms';
 import { temperature } from './temperature.pipes';
+import { DatePipe } from '@angular/common';
 
 
 @Component({
@@ -15,6 +16,7 @@ import { temperature } from './temperature.pipes';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   imports: [AuthComponent,AuthDirective , LearningResourcesComponent,DisplayFont,FormsModule,temperature],
+  providers : [DatePipe]
 })
 export class AppComponent {
   private authService = inject(AuthService);
