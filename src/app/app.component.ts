@@ -23,6 +23,7 @@ export class AppComponent {
   displayName = "aaa";
   displayDate: Date = new Date(); 
   temp? : number | string;
+  money ?: string | number ;
   setDetails(det :{name :string,date :Date}){
     this.displayName = det.name.split('@')[0];
     this.displayDate = det.date
@@ -31,5 +32,8 @@ export class AppComponent {
   onModelChange(tem :string){
         this.temp = tem ;
   }
+  onChange(m :string){
+    this.money = m ;
+}
   
 }

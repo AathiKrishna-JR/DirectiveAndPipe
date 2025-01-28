@@ -20,7 +20,13 @@
 
 </form> 
 
-<p *appAuth="'guest'" class="protected-content unauthenticated" >Guest should see this </p>
-<p *appAuth="'user'" class="protected-content authenticated" >should see this</p>
+<p *appAuth="'guest'" class="protected-content unauthenticated" >Guest can use this </p>
+
+<p *appAuth="'user'" class="protected-content authenticated" >{{ { name: displayName, date: displayDate } | display}} should see this</p>
+<form *appAuth="'user'" class = "protected-content authenticated">
+    <label class = "protected-content authenticated"> Enter the Number :</label>
+    <input type="text" name = "money" [(ngModel)] = 'money'  (ngModelChange)="onChange($event)"> 
+    <label class = "protected-content authenticated">{{ temp | temperature : 'cel' }} </label>
+</form> 
 
 </main>
