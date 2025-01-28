@@ -6,7 +6,7 @@ import { AuthDirective } from './auth/auth.directive';
 import { DisplayFont } from './display.pipe';
 import { FormsModule } from '@angular/forms';
 import { temperature } from './temperature.pipes';
-import { CurrencyPipe, DatePipe, DecimalPipe, UpperCasePipe } from '@angular/common';
+import { CurrencyPipe, DatePipe, DecimalPipe,  } from '@angular/common';
 
 
 @Component({
@@ -14,7 +14,7 @@ import { CurrencyPipe, DatePipe, DecimalPipe, UpperCasePipe } from '@angular/com
   standalone: true,
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  imports: [AuthComponent,AuthDirective , LearningResourcesComponent,DisplayFont,FormsModule,temperature, CurrencyPipe,UpperCasePipe,DecimalPipe],
+  imports: [AuthComponent,AuthDirective , LearningResourcesComponent,DisplayFont,FormsModule,temperature, CurrencyPipe, DecimalPipe],
   providers : [DatePipe]
 })
 export class AppComponent {
