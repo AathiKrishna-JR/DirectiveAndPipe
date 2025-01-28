@@ -33,6 +33,7 @@ export class AppComponent {
         this.temp = tem ;
   }
   onChange(m :string){
+    console.log("aaaaaaa");
     this.money = m ;
 }
   
