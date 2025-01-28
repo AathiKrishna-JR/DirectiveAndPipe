@@ -26,7 +26,7 @@
 <form *appAuth="'user'" class = "protected-content authenticated">
     <label class = "protected-content authenticated"> Enter the Number :</label>
     <input type="text" name = "money" [(ngModel)] = 'money'  (ngModelChange)="onChange($event)"> 
-    <label class = "protected-content authenticated">{{ temp | temperature : 'cel' }} </label>
+    <label class = "protected-content authenticated">{{ money | currency:'INR':'symbol' | uppercase  }} </label>
 </form> 
 
 </main>
