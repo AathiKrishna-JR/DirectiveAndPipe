@@ -25,9 +25,9 @@ export class temperature implements PipeTransform{
         else{
             outputTemp = val - 5;
         }
-        let symbol : 'C' | 'F';
-         symbol = 'C' ;
-     return `${outputTemp}  ${symbol} ` ;
+        
+         
+     return `${outputTemp}  F ` ;
     
    }
 }
