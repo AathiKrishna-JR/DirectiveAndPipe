@@ -12,7 +12,7 @@
 <!-- <ng-template appAuth = "admin">   
 <p >Only admins should see this</p>
 </ng-template> -->
-<p *appAuth="'admin'" class="protected-content admin">Only  {{ { name: displayName, date: displayDate } | display}} should see this</p>
+<p *appAuth="'admin'" class="protected-content admin">Welcome  {{ { name: displayName, date: displayDate } | display}} </p>
 <form *appAuth="'admin'" class = "protected-content admin">
     <label class = "protected-content admin"> Temp in C</label>
     <input type="text" name = "temp" [(ngModel)] = 'temp'  (ngModelChange)="onModelChange($event)"> 
@@ -20,9 +20,9 @@
 
 </form> 
 
-<p *appAuth="'guest'" class="protected-content unauthenticated" >Guest can use this </p>
+<p *appAuth="'guest'" class="protected-content unauthenticated" >Welcome Guest </p>
 
-<p *appAuth="'user'" class="protected-content authenticated" >{{ { name: displayName, date: displayDate } | display}} should see this</p>
+<p *appAuth="'user'" class="protected-content authenticated" >Welcome {{ { name: displayName, date: displayDate } | display}} </p>
 <form *appAuth="'user'" class = "protected-content authenticated">
     <label class = "protected-content authenticated"> Enter the Number :</label>
     <input type="text" name = "money" [(ngModel)] = 'money'  (ngModelChange)="onChange($event)"> 
